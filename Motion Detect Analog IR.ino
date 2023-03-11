@@ -1,5 +1,5 @@
 #include <elapsedMillis.h>
-#include <Keyboard.h>
+//#include <Keyboard.h>
 
 ////SENSOR PINS
 #define sensor1 A0
@@ -44,16 +44,6 @@ void setup()
   for (int thisReading = 0; thisReading < numReadings; thisReading++) {
     readings[thisReading] = 0;
   }
-/*
-  ///CALIBRATE SENSOR
-  for (int i = 0; i < calibrationTime; i++) {
-    Serial.print(".");
-    delay(1000);
-  }
-  Serial.print("Done Calibrating");
-  Serial.println("/r");
-
-*/
 }
 
 void loop() {
@@ -95,7 +85,7 @@ void loop() {
     Serial.println("threshhold: " + String(threshhold));
     touchFlag = 1;
     digitalWrite(15, LOW);
-    //Keyboard.println("1");
+      //Keyboard.println("1");
       //Keyboard.press(KEY_F1);
       //Keyboard.releaseAll();
     //delay(1000);
